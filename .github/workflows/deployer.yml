@@ -38,6 +38,8 @@ jobs:
         run: touch src/.env
       - name: Adding variables app
         run: echo -e 'APP_NAME='${{ secrets.APP_NAME }}'\nAPP_ENV='${{ secrets.APP_ENV }} '\nAPP_KEY='${{ secrets.APP_KEY }}'\nAPP_DEBUG='${{ secrets.APP_DEBUG }}'\nAPP_URL='${{ secrets.APP_URL}} >> src/.env
+#      - name: Adding variables app
+#        run: echo -e '\nMAIL_DRIVER='${{ secrets.nMAIL_DRIVER }}'\nMAIL_HOST='${{ secrets.MAIL_HOST }} '\nAPP_KEY='${{ secrets.APP_KEY }}'\nAPP_DEBUG='${{ secrets.APP_DEBUG }}'\nAPP_URL='${{ secrets.APP_URL}} >> src/.env
       - name: View env
         run: cat src/.env
       - name: Test SSH connection
