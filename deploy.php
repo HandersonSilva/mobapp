@@ -13,6 +13,8 @@ inventory('deployment/hosts.yml');
 
 set('application', 'MOBAPP');
 
+set('default_stage', 'production');
+
 set('repository', 'git@bitbucket.org:teamsisp/mobapp.git');
 set('keep_releases', 2);
 
@@ -69,7 +71,3 @@ task('deploy',[
 ])->desc('Deploy project');
 
 after('deploy:failed', 'deploy:unlock');
-
-
-
-
