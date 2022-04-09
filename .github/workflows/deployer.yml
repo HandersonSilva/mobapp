@@ -34,6 +34,12 @@ jobs:
         run: echo -e '\n  hostname:' ${{ secrets.TARGET_HOST }}'\n  stage:' ${{ secrets.DEPLOYER_STAGE }} '\n  deploy_path:' ${{ secrets.DEPLOYER_PATH }}'\n  user:' ${{ secrets.TARGET_USER }} >> deployment/hosts.yml
       - name: Adding host in deploy
         run: cat deployment/hosts.yml
+      - name: Create env
+        run: touch src/.env
+      - name: Adding variables app
+        run: echo -e 'APP_NAME='${{ secrets.APP_NAME }}'\nAPP_ENV='${{ secrets.APP_ENV }} '\nAPP_KEY='${{ secrets.APP_KEY }}'\nAPP_DEBUG='${{ secrets.APP_DEBUG }}'\nAPP_URL='${{ secrets.APP_URL}} >> deployment/hosts.yml
+      - name: View env
+        run: cat src/.env
       - name: Test SSH connection
         run: ssh ubuntu@${{ secrets.TARGET_HOST }} ls -l /home/ubuntu/switch
       - name: Set Up Deployer
