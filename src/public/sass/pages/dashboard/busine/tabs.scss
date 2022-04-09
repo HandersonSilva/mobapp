@@ -1,0 +1,11 @@
+#map{
+    height: 350px;
+}
+
+.tab-pane{
+    &.active{
+        #info{
+            margin: 1rem 0;
+        }
+    }
+}

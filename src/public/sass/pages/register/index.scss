@@ -1,0 +1,188 @@
+#fluid-container{
+    height: 110vh;
+    background-image: url(../../../images/site/background4.png), url(../../../images/site/background2.png);
+    background-position: center;
+    background-repeat: repeat, no-repeat;
+    background-size: cover;
+    padding: 25px 0;
+}
+.title {
+    text-align: center;
+    h2 {
+        font-size: 39px;
+        font-weight: 700;
+        text-transform: capitalize;
+        display: inline-block;
+        color: #fff;
+        margin-top: -20px;
+        margin-bottom: 2rem;
+        @media only screen and(max-width: $desktop-bp-min) {
+            font-size: 29px;
+        }
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.cadastro-empresa {
+    display: flex;
+    margin-top: -2%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 430px;
+    margin: 0 auto;
+    font-family: Arial;
+    font-size: 15px;
+    border-radius: 30px;
+    .card-body {
+        width: 100%;
+        background: #fff;
+        padding: 0;
+        border-radius: 15px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px 0px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 30;
+        form {
+            padding: 10px 30px;
+            // max-height: 525px;
+            .form-group.row {
+                margin-bottom: 0;
+            }
+        }
+        input[type=text],
+        input[type=email],
+        input[type=password],
+        select {
+            text-align: center;
+            width: 100%;
+            height: 50px;
+            -webkit-transition: all 0.5s ease-in-out !important;
+            -moz-transition: all 0.5s ease-in-out !important;
+            -ms-transition: all 0.5s ease-in-out !important;
+            -o-transition: all 0.5s ease-in-out !important;
+            transition: all 0.5s ease-in-out !important;
+            margin: 5px 0;
+        }
+        input[type=text],
+        input[type=email],
+        input[type=password] {
+            &:hover,
+            &:focus,
+            &:active {
+                color: rgb(28, 165, 62);
+                transition: .3s;
+            }
+        }
+        select {
+            color: rgb(28, 165, 62);
+            width: 100%!important;
+            text-align-last: center;
+            option[value='0'],
+            option[value='1'] {
+                color: #333;
+                text-align: center;
+            }
+        }
+        input[type=button],
+        input[type=submit],
+        input[type=reset] {
+            width: 100%;
+            text-align: center;
+            font-size: 13px;
+            margin: 5px 0 15px 0;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            
+            &:active {
+                -moz-transform: scale(0.95);
+                -webkit-transform: scale(0.95);
+                -o-transform: scale(0.95);
+                -ms-transform: scale(0.95);
+                transform: scale(0.95);
+            }
+        }
+        input[type=text],
+        input[type=password],
+        input[type=email] {
+            &::placeholder {
+                color: #cccccc;
+            }
+            &:focus {
+                border-bottom: 2px solid rgba(56, 142, 60, 1) !important;
+                &::placeholder {
+                    color: #cccccc;
+                }
+            }
+        }
+        #formFooterCadastro {
+            color: #718071;
+            background-color: #f6f6f6;
+            border-top: 1px solid #dce8f1;
+            padding: 10px 23%;
+            text-align: center;
+            -webkit-border-radius: 0 0 10px 10px;
+            border-radius: 0 0 10px 10px;
+            .underlineHover {
+                color: #718071;
+                font-size: 16px;
+                &:after {
+                    display: block;
+                    left: 0;
+                    bottom: -10px;
+                    width: 0;
+                    height: 3px;
+                    background-color: rgba(56, 142, 60, 1);
+                    content: "";
+                    transition: width 0.2s;
+                }
+                &:hover {
+                    color: #757575;
+                    text-decoration: none;
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .alert-cadastro {
+            padding: 8%!important;
+            color: red;
+        }
+    }
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}

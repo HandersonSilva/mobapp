@@ -1,0 +1,116 @@
+$primaryDarkColor: #388e3c;
+$primaryColor: #4CAF50;
+
+
+// Green colors
+.skin-default-dark {
+    /*Theme Colors*/
+    $themecolor: #009efb;
+    $themecolor-dark: #028ee1;
+    $topbar: #fff;
+    $sidebar: #4CAF50;
+    $sidebar-alt:#388e3c;
+    $nav-text-bg: #388e3c;
+    $sidebar-text: #fff;
+    $sidebar-icons: #fff; 
+    // Topbar
+    .topbar {
+        background: $topbar;
+        .navbar-dark .navbar-nav .nav-link{
+            color:$gray-500;
+        }
+        
+    }
+    //Sidebar
+    .sidebar-nav {
+        ul li a {
+            &.active,
+            &:hover {
+                color: $themecolor;
+                i {
+                    color: $themecolor;
+                }
+            }
+        }
+        > ul > li {
+            &.active > a {
+                color: $themecolor;
+                i {
+                    color: $themecolor;
+                }
+            }
+        }
+    }
+    
+    //Bread-crumb
+    .page-titles .breadcrumb .breadcrumb-item.active{
+        color: $themecolor;
+    }
+    
+    // Sidebar dark
+    
+    .topbar{
+        .top-navbar .navbar-header .navbar-brand .dark-logo {
+            display: inline-block;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .top-navbar .navbar-header .navbar-brand .light-logo {
+            display: none;
+        }
+    }    
+    .left-sidebar {
+        background: $sidebar;
+        .user-pro-body{
+            a.link{
+                color:$sidebar-text;
+            }
+        }
+        .nav-text-box{
+            border-color:transparent;
+            background: $nav-text-bg;
+
+            .nav-toggler{
+                
+                text-decoration: none;
+                [class^="ti-"], [class*=" ti-"] {
+                    color: $sidebar-icons;
+                }
+            }
+        }
+        .sidebar-nav>ul>li>a, .sidebar-nav ul li a {
+            color:$sidebar-text;
+            transition: 0.1s ease-in;
+            text-decoration: none;
+            i{
+                color:$sidebar-icons;
+            }
+            &:hover i, &:hover{
+               color:$white; 
+            }
+            &.active, &.active i{
+                color:$white;
+            }
+        } 
+        .sidebar-nav>ul>li.selected > a{
+            color: $white;
+            i {
+                color: $white;
+            }
+        }
+        .sidebar-nav ul li ul{
+            background: rgba(0,0,0,.2);
+        }
+
+        
+    }
+    .ps>.ps__scrollbar-y-rail>.ps__scrollbar-y {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    @media (min-width: 768px){
+        &.mini-sidebar .sidebar-nav #sidebarnav > li > ul, &.mini-sidebar .sidebar-nav #sidebarnav > li:hover > a{
+            background: $sidebar-alt;
+        }
+        
+    }
+    
+}

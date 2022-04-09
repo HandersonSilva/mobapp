@@ -1,0 +1,135 @@
+version: "3.8"
+
+services:
+  #bd_sispem
+  bd_sispem:
+    image: mysql:5.7
+    container_name: bd_sispem
+    restart: always
+    volumes:
+      - "./db/mysql_bd:/var/lib/mysql"
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=mobsystem_sispem12312 
+      - MYSQL_DATABASE=sispem 
+      - MYSQL_USER=mobsystem 
+      - MYSQL_PASSWORD=mobsystem_sispem12312
+      
+  redis:
+    image: "redis:alpine"
+    container_name: redis-server
+    restart: always
+    command: redis-server --requirepass 'mobsystem_sispem12312' --appendonly yes
+    volumes:
+      - "./redis/data:/data"
+    ports:
+      - "6379:6379"
+
+  # Application service layer
+  php:
+    build:
+      context: ./php
+      dockerfile: Dockerfile
+    container_name: server_sispem
+    working_dir: /var/www/sispem 
+    restart: always
+    volumes:
+      - "./php/sites-available/000-default.conf:/etc/apache2/sites-available/000-default.conf"
+      - "./app/sispem:/var/www/sispem"
+    ports:
+      - "8888:80"
+    links:
+     - "bd_sispem"
+     - "redis"
+      
+   server-socket:
+    build:
+      context: ./app/socket-server
+      dockerfile: Dockerfile
+    container_name: server_socket
+    working_dir: /usr/app
+    restart: always
+    ports:
+      - 9001:9001
+    volumes:
+      - ./app/socket-server:/usr/app
+    links:
+     - "bd_sispem"
+     - "redis"
+
+
+  # Application
+  #sispem-web:
+   # image: nginx:1.19-alpine
+   # container_name: sispem-web
+   # restart: always
+   # volumes:
+   # - "./node/nginx.conf:/etc/nginx/nginx.conf"
+   # - "./app/sispem-web:/usr/share/nginx/html"
+   # ports:
+    #    - "8080:80"
+    #links:
+     #   - "php"
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+

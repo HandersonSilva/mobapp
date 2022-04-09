@@ -1,0 +1,108 @@
+//pordutos//
+
+{
+	"nome_prod":"X frango",
+	"desc_prod":"Frango, alface, tomate, catupiri, cebola",
+	"img_prod_url":"192.168.15.3:8000/api/example.png",
+	"status_promo":"1",
+	"valor_prod":7.50,
+	"possui_attr": 1,
+	"categoria_id":1
+}
+
+{
+	"nome_prod":"X  tudo",
+	"desc_prod":"Hamburguer, alface, tomate, mussarela, cebola, pão especial, molho especial",
+	"img_prod_url":"192.168.15.3:8000/api/example.png",
+	"status_promo":"1",
+	"valor_prod":9.00,
+	"possui_attr": 1,
+	"categoria_id":1
+}
+
+    {
+	"nome_prod":"Pizza média frango-catupiri",
+	"desc_prod":"Borda recheada, massa especial, tomate, manjericão, queijo muzzarela",
+	"img_prod_url":"192.168.15.3:8000/api/example.png",
+	"status_promo":"1",
+	"valor_prod":28.50,
+	"possui_attr": 1,
+	"categoria_id":2
+}
+}
+
+	"nome_prod":"Pizza G mussarela",
+	"desc_prod":"Borda recheada, massa especial, tomate, mussarela, chedar",
+	"img_prod_url":"192.168.15.3:8000/api/example.png",
+	"status_promo":"1",
+	"valor_prod":28.50,
+	"possui_attr": 1,
+	"categoria_id":2
+}
+
+}
+
+	"nome_prod":"Açai 500 ml",
+	"desc_prod":"Açai tradicional, leite condensado e granola",
+	"img_prod_url":"https://via.placeholder.com/150x150.png",
+	"status_promo":"1",
+	"valor_prod":7.00,
+	"possui_attr": 1,
+	"categoria_id":3
+}
+
+{
+	"nome_prod":"Cachorro quente",
+	"desc_prod":"Pão, salsisha, carne, ervilha e milho",
+	"img_prod_url":"https://via.placeholder.com/150x150.png",
+	"status_promo":"1",
+	"valor_prod":3.50,
+	"categoria_id":4
+}
+
+	"nome_prod":"Suco de abacaxi com hortelã",
+	"desc_prod":"Suco na água ou leite",
+	"img_prod_url":"192.168.15.3:8000/api/example.png",
+	"status_promo":"1",
+	"valor_prod":7.50,
+	"possui_attr": 0,
+	"categoria_id":1
+}
+
+//categorias//
+
+{
+	"nome_categ":"Lanches"
+}
+
+{
+	"nome_categ":"Pizzas"
+}
+
+{
+	"nome_categ":"Açai"
+}
+
+{
+	"nome_categ":"Sucos"
+}
+
+// promocoes //
+
+{
+	"title_promocao":"Pastel grande + refrigerente 1litro + bauru + fritas",
+	"valor_total":32.25
+}
+
+{
+	"title_promocao":"Açai 700ml + coca lata 350ml + X bacon ",
+	"valor_total":18.00
+}
+
+{
+	"title_promocao":"Pizza G com borda recheada + 2 cachorro quente + refri 1 lit",
+	"valor_total": 35.00
+}
+
+gerador de imagens
+https://via.placeholder.com/150x150.png

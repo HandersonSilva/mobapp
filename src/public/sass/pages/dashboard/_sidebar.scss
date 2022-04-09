@@ -1,0 +1,43 @@
+.left-sidebar{
+    
+    &.visible-sidebar{
+        left: 0;
+    }
+
+    .busine-logo{
+        img{
+            max-height: 40px;
+        }
+    }
+    
+
+    .open-items{
+        transition: all .3s linear;
+        overflow: hidden;
+        max-height: 0;
+        //opacity: 0;
+        padding: 0;
+        background-color: #388e3c !important;
+        &.visible{
+            height: auto;
+            max-height: 300px;
+            transform: all;
+            //opacity: 1;
+           >li{
+               //display: block;
+           }
+        }
+
+        li{
+            //display: none;
+            padding-left: 20px;
+            a{
+                color: #fff;;
+            }
+            &:hover{
+                opacity: 0.8;
+                background-color: #8eac8f;
+            }
+        }
+    }
+}

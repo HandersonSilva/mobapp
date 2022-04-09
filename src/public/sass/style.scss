@@ -1,0 +1,32 @@
+/*
+Template Name: Admin Template
+Author: Niravjoshi / Wrappixel
+File: scss
+*/
+body::-webkit-scrollbar {
+    width: 8px;
+}
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #dae0e5;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+
+
+@import 'variable';
+@import 'breakpoints';
+@import 'colors/default-dark';
+@import 'core/core';
+// Import Bootstrap source files
+@import "../../node_modules/bootstrap/scss/bootstrap";
+//This is for the icons
+@import '../icons/themify-icons/themify-icons.css';
+//This is the core files
+//@import 'core/core';
+@import 'widgets/widgets';
+@import 'responsive';
+@import 'pages/all';

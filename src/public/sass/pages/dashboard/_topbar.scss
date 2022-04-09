@@ -1,0 +1,22 @@
+.topbar {
+    .top-navbar {
+        .search-box {
+            .app-search .srh-btn {
+                top: 31px;
+            }
+        }
+
+        .menu-mobile {
+            @media screen and(min-width: 769px) {
+                display: none;
+            }
+        }
+
+        .navbar-header{
+            min-width: 63px;
+            @media screen and(max-width: $desktop-bp-min) {
+                padding-right: 0;
+            }
+        }
+    }
+}

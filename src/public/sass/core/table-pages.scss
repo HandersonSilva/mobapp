@@ -1,0 +1,79 @@
+/*
+Template Name: Admin Template
+Author: Wrappixel
+
+File: scss
+*/
+
+@import '../variable';
+
+/*******************
+Table Cell
+*******************/
+
+.table-box {
+    display: table;
+    width: 100%;
+}
+
+.table {
+    box-shadow: 2px #748679;
+    color: #fff!important;
+    thead {
+        tr:hover {
+            background: #748679!important;
+        }
+        background: #748679!important;
+    }
+    tbody {
+        background: #fff!important;
+        color: #6a746d!important;
+        a {
+            margin: 5%;
+        }
+    }
+    tr:hover {
+        background: #e4e4e4!important;
+        cursor: pointer;
+    }
+    td,
+    th {
+        text-align: center!important;
+    }
+}
+
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.table thead th,
+.table th {
+    font-weight: 500;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.lite-padding td {
+    padding: 5px;
+}
+
+.v-middle {
+    td,
+    th {
+        vertical-align: middle;
+    }
+}
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background: $gray-100;
+}
