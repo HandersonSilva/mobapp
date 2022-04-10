@@ -15,7 +15,7 @@ set('application', 'MOBAPP');
 
 set('default_stage', 'production');
 
-set('repository', 'git@bitbucket.org:teamsisp/mobapp.git');
+set('repository', 'git@github.com:HandersonSilva/mobapp.git');
 set('keep_releases', 2);
 
 task('copy-config', function () {
