@@ -384,7 +384,7 @@
     </div>
     <footer>
         <div class="container">
-            <p>&copy; SwitchSoftware 2022. All Rights Reserved.</p>
+            <p>&copy; Switch Software 2022. All Rights Reserved.</p>
             <ul class="list-inline">
                 <li class="list-inline-item">
                     <a href="#">Whatsapp (84) 99695-1014</a>
