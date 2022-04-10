@@ -42,6 +42,8 @@ jobs:
 #        run: echo -e '\nMAIL_DRIVER='${{ secrets.nMAIL_DRIVER }}'\nMAIL_HOST='${{ secrets.MAIL_HOST }} '\nAPP_KEY='${{ secrets.APP_KEY }}'\nAPP_DEBUG='${{ secrets.APP_DEBUG }}'\nAPP_URL='${{ secrets.APP_URL}} >> src/.env
       - name: View env
         run: cat src/.env
+      - name: View env
+        run: cd src && ls -a
       - name: Test SSH connection
         run: ssh ubuntu@${{ secrets.TARGET_HOST }} ls -l /home/ubuntu/switch
       - name: Set Up Deployer
