@@ -35,13 +35,13 @@ jobs:
       - name: Adding host in deploy
         run: cat deployment/hosts.yml
       - name: Create env
-        run: touch src/.env
+        run: touch src/.env.mobapp
       - name: Adding variables app
-        run: echo -e 'APP_NAME='${{ secrets.APP_NAME }}'\nAPP_ENV='${{ secrets.APP_ENV }} '\nAPP_KEY='${{ secrets.APP_KEY }}'\nAPP_DEBUG='${{ secrets.APP_DEBUG }}'\nAPP_URL='${{ secrets.APP_URL}} >> src/.env
+        run: echo -e 'APP_NAME='${{ secrets.APP_NAME }}'\nAPP_ENV='${{ secrets.APP_ENV }} '\nAPP_KEY='${{ secrets.APP_KEY }}'\nAPP_DEBUG='${{ secrets.APP_DEBUG }}'\nAPP_URL='${{ secrets.APP_URL}} >> src/.env.mobapp
 #      - name: Adding variables app
 #        run: echo -e '\nMAIL_DRIVER='${{ secrets.nMAIL_DRIVER }}'\nMAIL_HOST='${{ secrets.MAIL_HOST }} '\nAPP_KEY='${{ secrets.APP_KEY }}'\nAPP_DEBUG='${{ secrets.APP_DEBUG }}'\nAPP_URL='${{ secrets.APP_URL}} >> src/.env
       - name: View env
-        run: cat src/.env
+        run: cat src/.env.mobapp
       - name: View env
         run: cd src && ls -a
       - name: Test SSH connection
