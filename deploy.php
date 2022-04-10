@@ -18,9 +18,9 @@ set('default_stage', 'production');
 set('repository', 'git@bitbucket.org:teamsisp/mobapp.git');
 set('keep_releases', 2);
 
-//task('copy-config', function () {
-//    run('cp -f /home/ubuntu/environment/env.mobapp {{release_path}}/src/.env');
-//})->desc('Copy config files');
+task('copy-config', function () {
+    run('cp -f /home/ubuntu/environment/env.mobapp {{release_path}}/src/.env');
+})->desc('Copy config files');
 
 task('docker-build', function () use ($imageName, $version) {
   run('cd {{release_path}} && docker build -t handersonsilva/switch-'.$imageName.':'.$version.' .');
@@ -57,7 +57,7 @@ task('deploy',[
   'deploy:prepare',
   'deploy:release',
   'deploy:update_code',
-//  'copy-config',
+  'copy-config',
   'update-permissions',
   'docker-build',
   'docker-push',
